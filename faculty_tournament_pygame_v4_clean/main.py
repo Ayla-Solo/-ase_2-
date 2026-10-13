@@ -36,10 +36,13 @@ pygame.display.set_caption(
 
 clock = pygame.time.Clock()
 
-
 ROOT = Path(__file__).parent
 ASSETS = ROOT / "assets"
 
+pygame.mixer.init()
+pygame.mixer.music.load(str(ASSETS / "music.mp3"))
+pygame.mixer.music.set_volume(0.3)
+pygame.mixer.music.play(-1)
 
 # =========================================================
 # ШРИФТЫ
